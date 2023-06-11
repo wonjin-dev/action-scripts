@@ -19,7 +19,6 @@ async function _autoAssign(githubScript: GithubScriptInput) {
       return;
     }
 
-    console.log(`@${author} has been assigned to the pull request: #${number}`);
     return await githubScript.github.rest.issues.addAssignees({
       owner: githubScript.context.repo.owner,
       repo: githubScript.context.repo.repo,
@@ -32,6 +31,5 @@ async function _autoAssign(githubScript: GithubScriptInput) {
 }
 
 export const autoAssign = async (githubScript: GithubScriptInput) => {
-  // delete ref
   await _autoAssign(githubScript);
 };

@@ -1,2 +1,3 @@
 import { autoAssign } from './auto-assign-pr';
-export { autoAssign };
+import { deleteBranch } from './delete-branch';
+export { autoAssign, deleteBranch };
